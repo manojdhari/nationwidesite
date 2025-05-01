@@ -27,7 +27,6 @@ body {
   padding: 20px 0;
 }
 
-/* Header */
 header {
   background: var(--primary);
   color: var(--white);
@@ -45,7 +44,6 @@ header p {
   font-weight: 600;
 }
 
-/* Nav */
 nav {
   background: var(--accent);
   padding: 10px 0;
@@ -78,7 +76,6 @@ nav a:hover {
   text-decoration: underline;
 }
 
-/* Hero Section */
 .hero {
   text-align: center;
   background: var(--white);
@@ -113,15 +110,16 @@ nav a:hover {
   background: #e65c00;
 }
 
-/* Content + Sidebar */
 .content-wrapper {
   display: flex;
+  flex-wrap: wrap;
   gap: 30px;
   margin-top: 30px;
 }
 
 .main-content {
-  flex: 1;
+  flex: 1 1 100%;
+  min-width: 0;
 }
 
 .main-content section {
@@ -142,10 +140,9 @@ nav a:hover {
   margin-bottom: 10px;
 }
 
-/* Sidebar */
 .sidebar {
-  width: 300px;
-  flex-shrink: 0;
+  flex: 1 1 300px;
+  max-width: 300px;
   position: sticky;
   top: 20px;
   align-self: flex-start;
@@ -164,7 +161,6 @@ nav a:hover {
   margin-bottom: 10px;
 }
 
-/* Contact CTA Block */
 .contact-cta {
   text-align: center;
   margin: 40px auto;
@@ -179,7 +175,6 @@ nav a:hover {
   margin-bottom: 10px;
 }
 
-/* Footer */
 footer {
   background: #222;
   color: #ccc;
@@ -189,12 +184,10 @@ footer {
   font-size: 0.95rem;
 }
 
-/* Responsive Layout */
 @media (max-width: 768px) {
   .menu-toggle {
     display: block;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 0 auto;
   }
 
   .menu-links {
@@ -215,17 +208,20 @@ footer {
 
   .sidebar {
     width: 100%;
+    max-width: 100%;
     position: static;
   }
 }
 
-/* Sticky Button */
 .sticky-btn {
   position: fixed;
   left: 50%;
   bottom: 10px;
   transform: translateX(-50%);
   z-index: 9999;
+  width: 100%;
+  max-width: 500px;
+  padding: 0 10px;
 }
 
 .call-btn {
@@ -241,8 +237,9 @@ footer {
   border-radius: 50px;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
   transition: all 0.3s ease;
-  max-width: 600px;
-  margin: 0 auto;
+  width: 100%;
+  max-width: 100%;
+  text-align: center;
 }
 
 .call-btn:hover {
@@ -272,7 +269,6 @@ footer {
   }
 }
 
-/* City Links Grid */
 .city-links-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
@@ -300,6 +296,13 @@ footer {
 }
 
 @media (max-width: 600px) {
+  .hero h2 { font-size: 1.5rem; }
+  .hero p { font-size: 1rem; }
+  header h1 { font-size: 1.6rem; }
+  header p { font-size: 1rem; }
+  .btn-primary { padding: 10px 20px; font-size: 1rem; }
+  .main-content h2 { font-size: 1.3rem; }
+  .sidebar > div { padding: 15px; }
   .city-links-grid {
     grid-template-columns: 1fr;
   }
