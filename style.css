@@ -233,61 +233,11 @@ footer {
   }
 }
 
-/* Sticky Button */
-.sticky-btn {
-  position: fixed;
-  left: 50%;
-  bottom: 10px;
-  transform: translateX(-50%);
-  z-index: 9999;
-}
-
-.call-btn {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: linear-gradient(135deg, #ff6a00, #ff3f00);
-  color: white;
-  padding: 15px 30px;
-  font-size: 18px;
-  font-weight: bold;
-  text-decoration: none;
-  border-radius: 50px;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
-  transition: all 0.3s ease;
-  max-width: 90%;
-  margin: 0 auto;
-}
-
-.call-btn:hover {
-  background: linear-gradient(135deg, #ff3f00, #ff6a00);
-  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.35);
-  transform: translateY(-5px);
-}
-
-.call-btn:active {
-  transform: translateY(2px);
-}
-
-.call-btn span {
-  margin-left: 10px;
-}
-
-.call-btn i {
-  font-size: 24px;
-  margin-right: 8px;
-}
-
 @media (max-width: 480px) {
   .hero h2,
   .contact-cta h3,
   .main-content h2 {
     font-size: 1.2rem;
-  }
-
-  .call-btn {
-    padding: 10px 20px;
-    font-size: 16px;
   }
 }
 
